@@ -18,7 +18,7 @@ def call_chatbot_api(query):
     result = response.json()
     return result['response']
     
-user_query = st.text_input("Enter your query here:")
+user_query = st.text_input("Enter the URL of the webpage your want to summarize:")
 with st.spinner("AI Thinking...Please wait a while to Cheers!"):    
     if user_query !="" and not user_query.strip().isspace() and not user_query == "" and not user_query.strip() == "" and not user_query.isspace():
         response = call_chatbot_api(user_query)
