@@ -4,7 +4,7 @@ import streamlit as st
 
 st.set_page_config(page_title="Webpage Summarization AI Assistant - Open Source Version", layout="wide")
 st.subheader("Webpage Summarization AI Assistant - Open Source Version")
-#st.write('---')
+st.write('Important notice: This webpage summarization AI Assistant is offered ONLY for the purpose of assisting users to read legal website page contents and by no means for any other use. Any user should never interact with the AI Assistant in any way that is against any related promulgated regulations. The user is the only entity responsible for interactions taken between the user and the AI Assistant.')
 
 css_file = "main.css"
 with open(css_file) as f:
