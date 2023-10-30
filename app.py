@@ -1,6 +1,15 @@
 import requests
 import streamlit as st
 
+
+st.set_page_config(page_title="Webpage Summarization AI Assistant - Open Source Version", layout="wide")
+st.subheader("Webpage Summarization AI Assistant - Open Source Version")
+#st.write('---')
+
+css_file = "main.css"
+with open(css_file) as f:
+    st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
+
 def call_chatbot_api(query):
     #url = 'https://binqiangliu-flask-inference-api.hf.space/api/chat'
     url = 'https://ishare-langchainsummarizationchainflaskapi.hf.space/api/chat'
