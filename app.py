@@ -15,8 +15,9 @@ def call_chatbot_api(target_url):
     url = 'https://ishare-langchainsummarizationchainflaskapi.hf.space/api/chat'
     json_data_for_api = {'target_url': target_url}
     #response = requests.post(url, json=json_data_for_api)
-    response = requests.post(url, headers=headers, data=json.dumps(json_data_for_api))   #This format needs 'import json', or else NameError: name 'json' is not defined
-
+    #response = requests.post(url, headers=headers, data=json.dumps(json_data_for_api))   #This format needs 'import json', or else NameError: name 'json' is not defined
+    response = requests.post(url, data=json.dumps(json_data_for_api))   #This format needs 'import json', or else NameError: name 'json' is not defined
+   
     result = response.json()
     return result['response']
     
